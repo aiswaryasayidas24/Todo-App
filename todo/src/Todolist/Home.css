@@ -1,0 +1,172 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f06, #4a90e2);
+  animation: gradientAnimation 15s ease infinite;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: titleAnimation 2s ease-in-out infinite alternate;
+  text-align: center;
+}
+
+.container-2 {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  margin-left: 80px;
+}
+
+button {
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f06;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.card-content {
+  flex-grow: 1;
+  margin-left: 10px;
+  min-width: 200px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button:focus {
+  outline: none;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(135deg, #f06, #4a90e2);
+  }
+  50% {
+    background: linear-gradient(135deg, #4a90e2, #f06);
+  }
+  100% {
+    background: linear-gradient(135deg, #f06, #4a90e2);
+  }
+}
+
+@keyframes titleAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .container-2 {
+    width: 100%;
+    padding: 15px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-left: 100px;
+    margin-top: 0px;
+  }
+
+  button {
+    margin-left: 20px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-content {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .card-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .container-2 {
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: 50%;
+    margin-left: 80px;
+    
+  }
+
+  button {
+    width: 50%;
+    margin-left: 80px;
+  }
+}
